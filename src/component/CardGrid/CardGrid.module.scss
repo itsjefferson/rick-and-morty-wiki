@@ -1,0 +1,11 @@
+.gridCard {
+  --card-size: 270px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--card-size), 1fr));
+  justify-items: center;
+  padding-left: 0;
+  margin-left: 0;
+  gap: 24px;
+  margin: 2em;
+}

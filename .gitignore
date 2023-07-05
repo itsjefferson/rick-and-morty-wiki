@@ -1,0 +1,45 @@
+# Logs
+logs
+*.log
+
+# Build artifacts
+dist/
+build/
+out/
+public/
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependency directories
+node_modules/
+.yarn/
+
+# Testing
+coverage/
+
+# IDE files
+.vscode/
+.idea/
+
+# Compiled output
+*.css
+*.js
+*.map
+
+# Editor directories and files
+.editorconfig
+.eslintcache
+*.swp
+*.swo
+*.swn
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.md~

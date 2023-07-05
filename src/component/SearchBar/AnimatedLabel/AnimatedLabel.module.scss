@@ -1,0 +1,29 @@
+.random {
+  font-weight: bold;
+  color: hsl(0, 0%, 15%);
+}
+
+.animateRandom {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+    animation: typeWriter 0.75s steps(12) forwards;
+  }
+
+  @keyframes typeWriter {
+    to {
+      left: 100%;
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  .random {
+    font-size: 18px;
+  }
+}

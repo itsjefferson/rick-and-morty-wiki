@@ -1,0 +1,66 @@
+.filterList {
+  display: none;
+}
+
+.filterListVisible {
+  background: hsl(0, 0%, 15%, 0.75);
+  display: flex;
+  justify-content: center;
+  left: 0;
+  width: 100%;
+  z-index: 25;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 72px;
+  padding: 12px;
+  border-radius: 4px 4px 0 0;
+
+  animation: openFilter 0.75s ease 0s 1 normal forwards;
+
+  @keyframes openFilter {
+    0% {
+      opacity: 0;
+      transform: rotateX(100deg);
+      transform-origin: bottom;
+    }
+
+    100% {
+      opacity: 1;
+      transform: rotateX(0);
+      transform-origin: bottom;
+    }
+  }
+
+  .filterContainer {
+    background: hsl(0, 0%, 20%);
+    border-radius: 12px;
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filterOption {
+    background: hsl(0, 0%, 15%);
+    border-radius: 25px;
+    width: 125px;
+    font-family: "Poppins", Sans-Serif;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    padding: 8px 16px;
+    font-size: 12px;
+
+    &:hover {
+      background: hsl(160, 45%, 60%);
+    }
+  }
+
+  .isActiveFilter {
+    background: hsl(160, 45%, 60%);
+  }
+}

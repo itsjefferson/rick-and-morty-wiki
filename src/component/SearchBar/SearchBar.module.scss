@@ -1,0 +1,140 @@
+// BASE:
+main {
+  position: relative;
+  z-index: 100;
+}
+
+form {
+  position: absolute;
+  bottom: 25%;
+  left: 24px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  .welcomeContainer {
+    .welcomeTitle {
+      color: hsl(0, 0%, 95%);
+      font-size: 2em;
+
+      span {
+        color: var(--color-aqua-green);
+      }
+    }
+
+    .welcomeDesc {
+      color: hsl(0, 0%, 95%);
+      border-left: 2px solid var(--color-aqua-green);
+      padding-left: 6px;
+      margin-top: 12px;
+    }
+  }
+
+  .searchContainer {
+    position: relative;
+    .searchInput {
+      font-family: "Poppins", Sans-Serif;
+      width: 100%;
+      outline: none;
+      border: none;
+      padding: 8px;
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: 500;
+      color: hsl(0, 0%, 25%);
+    }
+
+    .animatedLabel {
+      position: absolute;
+      bottom: 30%;
+      left: 12px;
+    }
+  }
+}
+
+// Mobile:
+
+@media (max-width: 400px) {
+  form {
+    bottom: 16%;
+    left: 12px;
+
+    .welcomeContainer {
+      .welcomeTitle {
+        font-size: 1.5em;
+      }
+
+      .welcomeDesc {
+        font-size: 0.75em;
+      }
+    }
+  }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+  form {
+    bottom: 20%;
+
+    .welcomeContainer {
+      .welcomeTitle {
+        font-size: 2em;
+      }
+
+      .welcomeDesc {
+        font-size: 0.75em;
+      }
+    }
+  }
+}
+
+@media (min-width: 770px) {
+  form {
+    .welcomeContainer {
+      .welcomeTitle {
+        font-size: 4em;
+        letter-spacing: -1.5px;
+      }
+
+      .welcomeDesc {
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  .videoContainer {
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+
+    video {
+      object-fit: cover;
+      object-position: right top;
+    }
+  }
+  form {
+    .searchContainer {
+      .searchInput {
+        font-size: 18px;
+        width: 120%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .videoContainer {
+    height: 750px;
+    overflow: hidden;
+  }
+  form {
+    .searchContainer {
+      .searchInput {
+        font-size: 18px;
+        width: 120%;
+      }
+    }
+  }
+}

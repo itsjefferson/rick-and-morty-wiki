@@ -1,0 +1,131 @@
+.filterContainer {
+  background: hsl(0, 0%, 15%, 0.75);
+  position: fixed;
+  border-radius: 16px;
+  bottom: 12px;
+  left: 32%;
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 4px 12px;
+
+  .listTitle {
+    background: hsl(0, 0%, 15%);
+    height: 75%;
+    width: 75px;
+    border-radius: 12px;
+    font-size: 14px;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+  }
+
+  .clearFilter {
+    background: hsl(345, 80%, 50%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+
+    &:hover {
+      background: hsl(345, 85%, 45%);
+    }
+  }
+
+  .filterOptionContainer {
+    background: hsl(0, 0%, 20%);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 12px;
+    height: 50px;
+    padding: 2px 4px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .filter {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      width: 84px;
+      height: 75%;
+      padding-left: 4px;
+      border-radius: 4px;
+
+      * {
+        color: hsl(0, 0%, 100%);
+      }
+    }
+
+    .filter span {
+      text-transform: capitalize;
+      font-size: 14px;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    .selectedFilter {
+      background: hsl(0, 0%, 10%);
+    }
+  }
+}
+
+.filterOpen {
+  border-radius: 0 0 8px 8px;
+}
+
+@media (max-width: 600px) {
+  .filterContainer {
+    width: 90%;
+    left: 6vw;
+
+    .filterOptionContainer {
+      width: 75%;
+      .filter span {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .filterContainer {
+    width: 75%;
+    left: 12vw;
+
+    .filterOptionContainer {
+      width: 75%;
+      .filter span {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .filterContainer {
+    width: 65%;
+    left: 18vw;
+
+    .filterOptionContainer {
+      width: 75%;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .filterContainer {
+    width: 50%;
+    left: 25vw;
+
+    .filterOptionContainer {
+      width: 75%;
+    }
+  }
+}
